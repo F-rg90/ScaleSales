@@ -1,13 +1,224 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200&family=ZCOOL+KuaiLe&display=swap');
+  
+  /* base styles */
+  * {
+    margin: 0;
+    font-family: Overpass;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Overpass";
+    color: #54AEDE;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  #root {
+    height: 100vh;
+    background: rgb(0,0,166);
+    background: linear-gradient(360deg, rgba(0,0,166,1) 0%, rgba(0,8,110,1) 18%);
+  }
+
+
+  
+  .content {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    opacity: 100;
+  }
+
+  /* Sale preview list */
+  .sale-preview {
+    padding: 30px 5px;
+    border: 4px groove rgba(0, 0, 0, 0.221);
+    border-radius: 20px;
+    box-shadow: black;
+    width: 600px
+  }
+
+  .sale-preview:hover {
+    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.605); 
+  }
+
+  .sale-preview h2 {
+    font-size: 33px;
+    color: #54AEDE;
+    margin-bottom: 3px;
+    text-shadow:0 0 8px black;
+  }
+  
+  .sale-preview a {
+    text-decoration: none;
+  }
+  .sale-preview p {
+   color: white;
+   font-family: Overpass;
+   font-size: 20px;
+   text-shadow:0 0 8px black;
+  }
+
+
+  /* new sale */
+  .new-sale {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow:0 0 8px black;
+    font-size: 20px;
+    
+  }
+  .new-sale label {
+    text-align: left;
+    display: block;
+  }
+  .new-sale h2 {
+    font-size: 40px;
+    color: #54AEDE;
+    margin-bottom: 30px;
+    text-shadow:0 0 8px black;
+  }
+  .new-sale input, .new-sale textarea, .new-sale select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid D6F1FF;
+    box-sizing: border-box;
+    display: block;
+    color: black;
+    font-size: 20px;
+    background-color: #5a6cf5;
+    border-radius: 8px;
+  }
+  .new-sale button {
+    background: #54AEDE;
+    color: white;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 30px;
+  }
+
+  .start{
+    margin: .4rem 0;
+  }
+  .App {
+    
+  }
+
+  /* Search Bar and Nav */
+  .SearchBar {
+    box-sizing: border-box;
+    margin:auto;
+    max-width:1000px;
+  ;
+  }
+  .SearchBar input {
+    padding: 11px;
+    border: none;
+    background: #5a6cf5;
+    font-size: 20px;
+    border-radius: 13px;
+    color: white;
+    font-family: ZCOOL KuaiLe;
+  }
+  .SearchBar ::placeholder {
+    color: white;
+  }
+  .links {
+    text-shadow:0 0 8px black;
+    margin: auto;
+  }
+  .navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    
+    margin: 0 auto;
+    border-bottom: 4px groove rgba(0, 0, 0, 0.221);
+    
+  }
+  .navbar h1 {
+    color: #54AEDE;
+    font-family: ZCOOL KuaiLe;
+  }
+  .navbar .links {
+    margin-left: auto;
+  }
+  .navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 19px;
+  }
+  .navbar a:hover {
+    color: #54AEDE;
+  }
+
+
+  /* sale details*/
+  .sale-details button {
+    background:#54AEDE;
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+    text-shadow:0 0 8px black;
+    float: right;
+  }
+  .html {
+  }
+  .sale-details h1 {
+    border: 2px black;
+    color: #54AEDE;
+    text-shadow:0 0 8px black;
+    font-size: 32px;
+  }
+  .sale-details h2 {
+    border: 2px black;
+    color: white;
+    text-shadow:0 0 8px black;
+    font-size: 22px;
+  }
+  .sale-details p {
+    color:white;
+    text-shadow:0 0 8px black;
+    font-size: 28px;
+    border: 5px groove rgba(0, 0, 0, 0.331);
+    border-radius: 8px;
+    
+  }
+  .sold-list {
+    color: black;
+    font-size: 15px;
+
+  }
+  .sold-list h2 {
+    font-size: 20px;
+  }
+  .sold-list p {
+
+  }
+ /* error */
+  .lost-boy h2 {
+    font-size: 100px;
+    text-align: center;
+  }
+  .lost-boy p {
+    font-size: 50px;
+    text-align: center;
+  }
+  .lost-boy {
+    font-size: 50px;
+    text-align: center;
+    color: red;
+
+  }
+
+  /* Login */
+  .login h2 {
+    text-align: center;
+  }
+  .login p {
+    text-align: center;
+    font-size: 100px;
+  }

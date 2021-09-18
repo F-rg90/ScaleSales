@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+
+
+import Navbar from './Navbar';
+import Profile from './Profile';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import NewSale from './NewSale';
+import SaleDetails from './SaleDetails';
+import LostBoy from './Lostboy';
+import Login from './Login';
 
 function App() {
+  // const title = 'Welcome to Scale-Sales';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+        <Switch>
+          <Route exact path="/">
+            <Profile />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route path="/NewSale">
+            <NewSale />
+          </Route>
+          <Route path="/Sales/:id">
+            <SaleDetails />
+          </Route>
+          <Route path="*">
+            <LostBoy />
+          </Route>
+        </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
